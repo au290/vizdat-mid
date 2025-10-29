@@ -686,7 +686,7 @@ if page == "📊 Interactive Dashboard":
                 'Avg Total Wars': '{:.0f}',
                 'Clan Count': '{:.0f}'
             }).background_gradient(subset=['Avg Win Rate (%)'], cmap='RdYlGn'),
-            width='stretch',
+            use_container_width=True,
             height=300
         )
     
@@ -939,7 +939,7 @@ if page == "📊 Interactive Dashboard":
     # Display styled dataframe
     st.dataframe(
         style_dataframe(feature_importance),
-        width='stretch',
+        use_container_width=True,
         height=350
     )
     
@@ -990,7 +990,7 @@ if page == "📊 Interactive Dashboard":
                     'total_wars': '{:.0f}',
                     'num_members': '{:.0f}'
                 }),
-                width='stretch',
+                use_container_width=True,
                 height=250
             )
         else:
@@ -1022,7 +1022,7 @@ if page == "📊 Interactive Dashboard":
                     'mean_member_trophies': '{:.0f}',
                     'wr_diff': '+{:.1f}%'
                 }),
-                width='stretch',
+                use_container_width=True,
                 height=250
             )
         else:
@@ -1048,7 +1048,7 @@ if page == "📊 Interactive Dashboard":
                     'war_wins': '{:.0f}',
                     'total_wars': '{:.0f}'
                 }),
-                width='stretch',
+                use_container_width=True,
                 height=250
             )
         else:
@@ -1609,4 +1609,5 @@ else:  # Key Findings & Recommendations page
         <p>Comprehensive Analysis of 100K+ Clans | Stratified Sampling from 3.5M+ Dataset</p>
     </div>
     """, unsafe_allow_html=True)
+
 
